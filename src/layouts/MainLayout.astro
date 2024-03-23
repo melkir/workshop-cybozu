@@ -1,0 +1,26 @@
+---
+import Footer from "../components/Footer.astro";
+import MainHead from "../components/MainHead.astro";
+import Navigation from "../components/Navigation.astro";
+
+const {
+  title = "OWDDM | KWDDM | 大阪市, 日本",
+  description = "OWDDM and KWDDM are volunteer non-profit groups that organizes Meetups in Kansai | Osaka/Kyoto Web Designers and Developers",
+} = Astro.props;
+---
+
+<html
+  lang="en"
+  class="scroll-behavior: smooth; h-full motion-safe:scroll-smooth"
+>
+  <MainHead {title} {description} />
+  <body
+    class="bg-gray-50 antialiased transition-colors duration-500 dark:bg-gray-700 text-blue-950 dark:text-gray-50"
+  >
+    <Navigation />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

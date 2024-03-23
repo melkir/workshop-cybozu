@@ -1,0 +1,15 @@
+---
+import MainLayout from "./MainLayout.astro";
+const {
+  title = "OWDDM | KWDDM | 大阪市, 日本",
+  description = "OWDDM and KWDDM are volunteer non-profit groups that organizes Meetups in Kansai | Osaka/Kyoto Web Designers and Developers",
+} = Astro.props;
+---
+
+<MainLayout {title} {description}>
+  <section>
+    <div>
+      <slot />
+    </div>
+  </section>
+</MainLayout>

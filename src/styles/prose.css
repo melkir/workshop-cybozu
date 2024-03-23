@@ -1,0 +1,67 @@
+.prose {
+  @apply mx-auto w-full max-w-5xl px-6 overflow-hidden;
+  @apply dark:text-gray-100;
+  line-height: 1.75em;
+}
+
+.prose > p {
+  @apply my-4 font-semibold text-justify;
+  @apply tracking-widest;
+}
+
+.prose > hr {
+  @apply my-8 border-gray-500;
+}
+
+.prose > h1 {
+  @apply mb-4 mt-10 text-xl font-bold leading-[38px];
+}
+
+.prose > h2 {
+  @apply mb-4 mt-10 font-normal text-2xl;
+}
+
+.prose > h3 {
+  @apply mb-4 mt-10 font-normal leading-tight text-xl;
+}
+
+.prose > h4 {
+  @apply font-normal;
+}
+
+.prose > img {
+  @apply my-16 mx-auto rounded-xl;
+  @apply object-center aspect-auto h-auto w-full;
+}
+
+.prose strong {
+  @apply font-bold;
+}
+
+.prose ul {
+  @apply my-4 pl-8;
+}
+
+.prose ol {
+  @apply my-16 list-inside list-decimal pl-4;
+}
+.prose ol ::marker {
+  @apply inline-block font-mono font-bold text-amber-500;
+}
+
+.prose li {
+  @apply my-2 text-sm;
+}
+
+.prose :where(a) {
+  @apply text-blue-600 hover:text-gray-200 no-underline;
+}
+
+.prose > p code {
+  @apply text-left mx-0.5 inline-block rounded-lg bg-gray-100 px-2 align-baseline leading-6 text-green-500 text-sm;
+}
+
+.prose > pre {
+  @apply my-6 text-left rounded-md;
+  @apply border-sky-500 bg-transparent py-3 text-base text-amber-400;
+}

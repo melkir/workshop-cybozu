@@ -1,0 +1,113 @@
+---
+import { Image } from "astro:assets";
+import RyuHero from "../assets/img/goldDragonRed.webp";
+import Avatar from "../assets/img/sunset-crop.webp";
+
+const props = Astro.props;
+const sizes = "(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw";
+---
+
+<section id="hero" class="h-full">
+  <Image
+    src={RyuHero}
+    alt="A magnificent Asian golden dragon encircled by crimson-gold blossoms."
+    loading="eager"
+    class="absolute object-cover h-screen aspect-auto"
+    sizes={sizes}
+    quality={"low"}
+  />
+
+  <div
+    class="relative grid h-screen place-items-center bg-red-800/80 dark:bg-gray-800/90 p-6"
+  >
+    <div class="container-fluid py-5 bg-faded min-h-full">
+      <div class="container">
+        <div class="py-3 pt-1 object-center">
+          <div class="grid-cols-1">
+            <div id="avatar">
+              <div class="overflow-hidden aspect-auto">
+                <Image
+                  src={Avatar}
+                  alt="Selfie"
+                  loading="eager"
+                  class="rounded-full w-60 h-60 object-center mx-auto aspect-auto"
+                  width={1020}
+                  height={1020}
+                  quality={"low"}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row py-3 pt-16">
+          <div class="text-center">
+            <h1
+              class="font-Futurewave text-xs sm:text-xl text-gray-400 dark:text-white"
+            >
+              Workshop at <span
+                class="text-sm sm:text-4xl font-extrabold font-Futurewave text-gradient-hero"
+                >OWDDM
+              </span><br />in<span
+                class="text-sm sm:text-2xl font-extrabold font-Futurewave"
+              >
+                Astro.build & HyGraph</span
+              >
+            </h1>
+            <h2
+              class="text-gradient-hero text-sm font-semibold uppercase tracking-widest sm:text-right"
+            >
+              March 23<span class="text-sm">rd</span>:2024
+            </h2>
+            <p
+              class="mt-6 max-w-xl mx-auto leading-7 text-gradient-hero font-Futurewave text-xs sm:text-base"
+            >
+              Learn how to create this blog & portfolio and gain insights into
+              the entire process from inception to deployment !
+            </p>
+          </div>
+        </div>
+        <div
+          class="flex justify-center space-x-1 sm:space-x-5 my-4 lg:my-10 font-Futurewave"
+        >
+          <a
+            href="https://www.meetup.com/ja-JP/osaka-web-designers-and-developers-meetup/"
+            target="_blank"
+            class="flex items-center justify-center gap-3 border-2 border-current px-2 py-1 sm:px-6 sm:py-4 text-white/20"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 24 24"
+              {...props}
+            >
+              <path
+                fill="currentColor"
+                d="M6.98.555a.518.518 0 0 0-.105.011a.53.53 0 1 0 .222 1.04a.533.533 0 0 0 .409-.633a.531.531 0 0 0-.526-.418m6.455.638a.984.984 0 0 0-.514.143a.99.99 0 1 0 1.02 1.699a.99.99 0 0 0 .34-1.36a.992.992 0 0 0-.846-.482m-3.03 2.236a5.029 5.029 0 0 0-4.668 3.248a3.33 3.33 0 0 0-1.46.551a3.374 3.374 0 0 0-.94 4.562a3.634 3.634 0 0 0-.605 4.649a3.603 3.603 0 0 0 2.465 1.597c.018.732.238 1.466.686 2.114a3.9 3.9 0 0 0 5.423.992c.068-.047.12-.106.184-.157c.987.881 2.47 1.026 3.607.24a2.91 2.91 0 0 0 1.162-1.69a4.238 4.238 0 0 0 2.584-.739a4.274 4.274 0 0 0 1.19-5.789a2.466 2.466 0 0 0 .433-3.308a2.448 2.448 0 0 0-1.316-.934a4.436 4.436 0 0 0-.776-2.873a4.467 4.467 0 0 0-5.195-1.656a5.106 5.106 0 0 0-2.773-.807zm-5.603.817a.759.759 0 0 0-.423.135a.758.758 0 1 0 .863 1.248a.757.757 0 0 0 .193-1.055a.758.758 0 0 0-.633-.328m15.994 2.37a.842.842 0 0 0-.47.151a.845.845 0 1 0 1.175.215a.845.845 0 0 0-.705-.365zm-8.15 1.028c.063 0 .124.005.182.014a.901.901 0 0 1 .45.187c.169.134.273.241.432.393c.24.227.414.089.534.02c.208-.122.369-.219.984-.208c.633.011 1.363.237 1.514 1.317c.168 1.199-1.966 4.289-1.817 5.722c.106 1.01 1.815.299 1.96 1.22c.186 1.198-2.136.753-2.667.493c-.832-.408-1.337-1.34-1.12-2.26c.16-.688 1.7-3.498 1.757-3.93c.059-.44-.177-.476-.324-.484c-.19-.01-.34.081-.526.362c-.169.255-2.082 4.085-2.248 4.398c-.296.56-.67.694-1.044.674c-.548-.029-.798-.32-.72-.848c.047-.31 1.26-3.049 1.323-3.476c.039-.265-.013-.546-.275-.68c-.263-.135-.572.07-.664.227c-.128.215-1.848 4.706-2.032 5.038c-.316.576-.65.76-1.152.784c-1.186.056-2.065-.92-1.678-2.116c.173-.532 1.316-4.571 1.895-5.599c.389-.69 1.468-1.216 2.217-.892c.387.167.925.437 1.084.507c.366.163.759-.277.913-.412c.155-.134.302-.276.49-.357c.142-.06.343-.095.532-.094m10.88 2.057a.468.468 0 0 0-.093.011a.467.467 0 0 0-.36.555a.47.47 0 0 0 .557.36a.47.47 0 0 0 .36-.557a.47.47 0 0 0-.464-.37zm-22.518.81a.997.997 0 0 0-.832.434a1 1 0 1 0 1.39-.258a1 1 0 0 0-.558-.176m21.294 2.094a.635.635 0 0 0-.127.013a.627.627 0 0 0-.48.746a.628.628 0 0 0 .746.483a.628.628 0 0 0 .482-.746a.63.63 0 0 0-.621-.496m-18.24 6.097a.453.453 0 0 0-.092.012a.464.464 0 1 0 .195.908a.464.464 0 0 0 .356-.553a.465.465 0 0 0-.459-.367m13.675 1.55a1.044 1.044 0 0 0-.583.187a1.047 1.047 0 1 0 1.456.265a1.044 1.044 0 0 0-.873-.451zM11.4 22.154a.643.643 0 0 0-.36.115a.646.646 0 0 0-.164.899a.646.646 0 0 0 .899.164a.646.646 0 0 0 .164-.898a.646.646 0 0 0-.54-.28z"
+              ></path>
+            </svg><span class="text-xs sm:text-base">MeetUp</span></a
+          >
+          <a
+            href="https://owddm.com/"
+            class="flex items-center justify-center gap-3 border-2 border-current px-2 py-1 sm:px-6 sm:py-4 text-white/20"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              viewBox="0 0 128 128"
+              {...props}
+            >
+              <path
+                fill="currentColor"
+                d="M64 .29C28.87.29.29 28.87.28 64C.29 99.13 28.87 127.71 64 127.71c35.13 0 63.71-28.59 63.71-63.71C127.71 28.87 99.13.29 64 .29m25.2 84.96c-6.24-1.85-13.4-3.09-21.59-3.38V67.61h24.18c-.26 6.62-1.21 12.45-2.59 17.64M38.75 42.74c6.26 1.86 13.43 3.11 21.64 3.4v14.25H36.16c.25-6.63 1.2-12.46 2.59-17.65m-2.53 24.87h24.17v14.25c-8.17.29-15.31 1.52-21.55 3.37c-1.4-5.19-2.36-11.01-2.62-17.62m55.57-7.22H67.61V46.13c8.17-.29 15.31-1.52 21.55-3.37c1.4 5.2 2.37 11.02 2.63 17.63m28.58 0h-21.3c-.26-7.53-1.35-14.17-2.96-20.05c5.73-2.35 10.52-5.19 14.49-8.17c5.58 8.14 9.1 17.79 9.77 28.22m-14.23-33.91c-3.39 2.51-7.44 4.93-12.28 6.96c-4.3-11.24-10.54-19.06-16.1-24.23c11.15 2.8 20.95 8.95 28.38 17.27m-19.22 9.4c-5.58 1.64-11.97 2.75-19.31 3.03V10.3c5.43 3.88 13.95 11.8 19.31 25.58M60.39 10.22v28.69c-7.38-.28-13.82-1.41-19.43-3.07c5.37-13.9 13.96-21.78 19.43-25.62M50.24 9.21c-5.55 5.17-11.79 12.99-16.09 24.23c-4.84-2.03-8.89-4.45-12.28-6.96c7.42-8.32 17.23-14.47 28.37-17.27M17.41 32.17c3.97 2.97 8.77 5.82 14.49 8.16c-1.61 5.88-2.7 12.52-2.96 20.05H7.64c.66-10.42 4.19-20.07 9.77-28.21m11.53 35.44c.26 7.53 1.36 14.17 2.96 20.06c-5.73 2.34-10.52 5.19-14.49 8.16c-5.58-8.14-9.11-17.79-9.78-28.22zm-7.06 33.91c3.38-2.51 7.43-4.92 12.28-6.96c4.3 11.23 10.53 19.06 16.09 24.23c-11.15-2.8-20.96-8.95-28.37-17.27m19.2-9.4c5.58-1.64 11.97-2.75 19.3-3.03v28.62c-5.41-3.88-13.93-11.81-19.3-25.59m26.53 25.65V89.09c7.37.28 13.79 1.4 19.38 3.05c-5.36 13.9-13.91 21.79-19.38 25.63m10.16 1.02c5.55-5.17 11.79-12.99 16.09-24.23c4.84 2.03 8.89 4.45 12.27 6.96c-7.42 8.32-17.22 14.47-28.36 17.27m32.83-22.96c-3.97-2.97-8.77-5.82-14.49-8.16c1.61-5.89 2.7-12.52 2.96-20.06h21.3c-.66 10.43-4.19 20.08-9.77 28.22"
+              ></path>
+            </svg>
+            <span class="text-xs sm:text-base">Website</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
